@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bai_15.1", "Bai_15.1.csproj", "{1BA27518-E9EF-4554-9D35-D7C38B578E0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bai_15.1_vidu_1", "..\Bai_15.1_vidu_1\Bai_15.1_vidu_1.csproj", "{90BA6CC8-897D-41B3-BA0E-95F21DEF498B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BA27518-E9EF-4554-9D35-D7C38B578E0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BA27518-E9EF-4554-9D35-D7C38B578E0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BA27518-E9EF-4554-9D35-D7C38B578E0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BA27518-E9EF-4554-9D35-D7C38B578E0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90BA6CC8-897D-41B3-BA0E-95F21DEF498B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90BA6CC8-897D-41B3-BA0E-95F21DEF498B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90BA6CC8-897D-41B3-BA0E-95F21DEF498B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90BA6CC8-897D-41B3-BA0E-95F21DEF498B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
