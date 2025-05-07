@@ -45,7 +45,6 @@ namespace Bai_15._1
             Console.WriteLine(j);
             Console.WriteLine("Ký tự thứ 2 của chuỗi là : " + chuoi10[1]);
 
-            //
 
 
         }
