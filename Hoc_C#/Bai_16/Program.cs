@@ -92,6 +92,37 @@ namespace Bai_16
             {
                 Console.Write(item + " ");
             }
+
+            //16. Clone
+            int[] mang13 = { 1, 2, 3, 4, 5 };
+            int[] mang14 = (int[])mang13.Clone();
+            Console.WriteLine();
+            foreach (int item in mang14)
+            {
+                Console.Write(item + " ");
+            }
+
+            //17. Reverse
+            int[] mang15 = { 1, 2, 3, 4, 5 };
+            Array.Reverse(mang15);
+            Console.WriteLine();
+            Console.Write("Mảng 15 sau khi đảo ngược : ");
+            foreach (int item in mang15)
+            {
+                Console.Write(item + " ");
+            }
+
+            //18. Sort
+            int[] mang16 = { 5, 4, 3, 2, 1 };
+            Array.Sort(mang16);
+            Console.WriteLine();
+            Console.Write("Mảng 16 sau khi sắp xếp : ");
+            foreach (int item in mang16)
+            {
+                Console.Write(item + " ");
+            }
+
+
         }
     }
 }
