@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A9C41A7D-E281-4F55-BD24-FE39622495EA}</ProjectGuid>
+    <ProjectGuid>{FB74FB8B-A280-43F2-B62C-788C8408D122}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Bai_tap_1</RootNamespace>
-    <AssemblyName>Bai_tap_1</AssemblyName>
+    <RootNamespace>Bai_1_Method</RootNamespace>
+    <AssemblyName>Bai_1_Method</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,11 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Goods.cs" />
-    <Compile Include="Letters.cs" />
-    <Compile Include="Postage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tinhToan.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
