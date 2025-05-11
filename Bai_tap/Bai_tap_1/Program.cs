@@ -14,14 +14,24 @@ namespace Bai_tap_1
         static List<Postage> listPostage = new List<Postage>();
         static void Main(string[] args)
         {
-            listLetter.Add(new Letters("Da Nang", "Phu", true));
-            listLetter.Add(new Letters("Sai Gon", "Quang", false));
+            Letters letters1 = new Letters("Da Nang", "Phu", true);
+            Letters letters2 = new Letters("Sai Gon", "Quang", false);
 
-            listGoods.Add(new Goods("Da Lat", "Phong", 25));
-            listGoods.Add(new Goods("Nha Tang", "Long", 18));
+            Goods goods1 = new Goods("Da Lat", "Phong", 25);
+            Goods goods2 = new Goods("Nha Tang", "Long", 18);
 
+            listLetter.Add(letters1);
+            listLetter.Add(letters2);
+            listGoods.Add(goods1);
+            listGoods.Add(goods2);
 
-            Console.OutputEncoding = Encoding.UTF8;
+            listPostage.Add(letters1);
+            listPostage.Add(letters2);
+            listPostage.Add(goods1);
+            listPostage.Add(goods2);
+
+            Encoding uTF8 = Encoding.UTF8;
+            Console.OutputEncoding = uTF8;
             Letters letters = new Letters();
             Goods goods = new Goods();
 
@@ -40,7 +50,7 @@ namespace Bai_tap_1
                 Console.WriteLine("2. Display Postage Information And Its Cost");
                 Console.WriteLine("3. Goods Count.");
                 Console.WriteLine("4. Search Letters By Name.");
-                Console.WriteLine("5. Sort By Name. Nếu tên người nhận trùng nhau thì sắp xếp theo phí vận chuyển.");
+                Console.WriteLine("5. Sort By Name.");
                 Console.WriteLine("6. Total Cost");
                 Console.WriteLine("7. Exit");
                 Console.Write("Your Choice : ");
@@ -60,6 +70,9 @@ namespace Bai_tap_1
                         break;
                     case 4:
                         SearchLetterByName();
+                        break;
+                    case 5:
+                        DisplaySortListByName();
                         break;
                     case 6:
                         TotalCost();
@@ -139,7 +152,7 @@ namespace Bai_tap_1
                 foreach (var good in listGoods)
                 {
                     double cost = good.CalculateShippingCost();
-                    Console.WriteLine($"Name : {good.name}\nAddress : {good.address}\nCost : {cost}");
+                    Console.WriteLine(good.ToString());
 
                 }
             }
@@ -149,7 +162,7 @@ namespace Bai_tap_1
                 foreach (var letter in listLetter)
                 {
                     double cost = letter.CalculateShippingCost();
-                    Console.WriteLine($"Name : {letter.name}\nAddress : {letter.address}\nCost : {cost}");
+                    Console.WriteLine(letter.ToString());
 
                 }
             }
@@ -159,7 +172,7 @@ namespace Bai_tap_1
                 foreach (var item in listPostage)
                 {
                     double cost = item.CalculateShippingCost();
-                    Console.WriteLine($"Name : {item.name}\nAddress : {item.address}\nCost : {cost}");
+                    Console.WriteLine(item.ToString()); ;
 
                 }
             }
@@ -167,7 +180,8 @@ namespace Bai_tap_1
 
         static void CountGoods()
         {
-            Console.WriteLine("Total goods : " + listGoods.Count);
+            int count = listGoods.Count();
+            Console.WriteLine("Total goods : " + count);
         }
 
 
@@ -190,7 +204,7 @@ namespace Bai_tap_1
                         if (item.name.Contains(nameWantToSearch))
                         {
                             double cost = item.CalculateShippingCost();
-                            Console.WriteLine($"Name : {item.name}\nAddress : {item.address}\nCost : {cost}");
+                            Console.WriteLine(item.ToString());
                         }
                     }
                     break;
@@ -225,6 +239,40 @@ namespace Bai_tap_1
                 totalCost += cost;
             }
             Console.WriteLine("Total Postage Cost : " + totalCost);
+        }
+
+        static void SortByName<T>(List<T> list) where T : Postage
+        {
+            list.Sort((x, y) => x.name.CompareTo(y.name));
+            Console.WriteLine("List sorted by name : ");
+            foreach (var item in list)
+            {
+                Console.WriteLine(item.ToString());
+            }
+
+        }
+
+        static void DisplaySortListByName()
+        {
+            Console.WriteLine("What list do you want to sort :");
+            Console.WriteLine("1.Goods");
+            Console.WriteLine("2.Letters");
+            Console.WriteLine("3.All");
+            Console.Write("Enter your choice : ");
+            int type = int.Parse(Console.ReadLine());
+
+            if (type == 1)
+            {
+                SortByName(listGoods);
+            }
+            else if (type == 2)
+            {
+                SortByName(listLetter);
+            }
+            else
+            {
+                SortByName(listPostage);
+            }
         }
     }
 }

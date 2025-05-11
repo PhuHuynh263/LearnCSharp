@@ -21,5 +21,9 @@ namespace Bai_tap_1
 
         public abstract double CalculateShippingCost();
 
+        public override string ToString()
+        {
+            return $"Name : {this.name}\nAddress : {this.address}\n";
+        }
     }
 }

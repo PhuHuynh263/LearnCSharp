@@ -21,5 +21,9 @@ namespace Bai_tap_1
             double cost = isFast ? 3000 : 500;
             return cost;
         }
+        public override string ToString()
+        {
+            return base.ToString() + $"Cost : {CalculateShippingCost()}";
+        }
     }
 }

@@ -20,5 +20,10 @@ namespace Bai_tap_1
             double cost = weight * 10000;
             return cost;
         }
+
+        public override string ToString()
+        {
+            return base.ToString() + $"Cost : {CalculateShippingCost()}";
+        }
     }
 }
